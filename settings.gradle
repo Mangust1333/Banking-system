@@ -1,0 +1,36 @@
+/*
+ * This file was created by Kubantsev Vladislav in march 2025
+ * */
+
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.9.0'
+}
+
+
+rootProject.name = 'Mangust1333'
+include 'Presentation'
+include 'BusinessLogic'
+include 'Infrastructure'
+include 'API-Gateway'
+include 'API-Gateway:BusinessLogic'
+findProject(':API-Gateway:BusinessLogic')?.name = 'BusinessLogic'
+include 'API-Gateway:Infrastructure'
+findProject(':API-Gateway:Infrastructure')?.name = 'Infrastructure'
+include 'API-Gateway:Presentation'
+findProject(':API-Gateway:Presentation')?.name = 'Presentation'
+include 'API-Gateway:Configure'
+findProject(':API-Gateway:Configure')?.name = 'Configure'
+include 'API-Gateway:SecurityModule'
+findProject(':API-Gateway:SecurityModule')?.name = 'SecurityModule'
+include 'Storage'
+include 'Storage:Config'
+findProject(':Storage:Config')?.name = 'Config'
+include 'Storage:BusinessLayer'
+findProject(':Storage:BusinessLayer')?.name = 'BusinessLayer'
+include 'Storage:Infrastructure'
+findProject(':Storage:Infrastructure')?.name = 'Infrastructure'
+include 'Storage:Presentation'
+findProject(':Storage:Presentation')?.name = 'Presentation'
+include 'Storage:Presentation'
+findProject(':Storage:Presentation')?.name = 'Presentation'
+

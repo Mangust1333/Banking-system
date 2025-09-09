@@ -1,0 +1,14 @@
+DROP TABLE IF EXISTS user_friends CASCADE;
+DROP TABLE IF EXISTS transfer_transactions CASCADE;
+DROP TABLE IF EXISTS withdraw_transactions CASCADE;
+DROP TABLE IF EXISTS deposit_transactions CASCADE;
+DROP TABLE IF EXISTS transactions CASCADE;
+DROP TABLE IF EXISTS accounts CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
+
+DROP TYPE IF EXISTS hair_color_entity CASCADE;
+DROP TYPE IF EXISTS gender_entity CASCADE;
+
+DROP SEQUENCE IF EXISTS users_id_seq;
+DROP SEQUENCE IF EXISTS accounts_id_seq;
+DROP SEQUENCE IF EXISTS transactions_id_seq;
